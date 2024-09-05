@@ -47,7 +47,9 @@
             IMGDone = new PictureBox();
             checkBox1 = new CheckBox();
             checkBox2 = new CheckBox();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)IMGDone).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnLoad
@@ -139,7 +141,7 @@
             // 
             // txtBoxWidth
             // 
-            txtBoxWidth.Location = new Point(514, 119);
+            txtBoxWidth.Location = new Point(571, 119);
             txtBoxWidth.Name = "txtBoxWidth";
             txtBoxWidth.Size = new Size(125, 27);
             txtBoxWidth.TabIndex = 9;
@@ -147,7 +149,7 @@
             // 
             // txtBoxHeight
             // 
-            txtBoxHeight.Location = new Point(514, 152);
+            txtBoxHeight.Location = new Point(571, 152);
             txtBoxHeight.Name = "txtBoxHeight";
             txtBoxHeight.Size = new Size(125, 27);
             txtBoxHeight.TabIndex = 10;
@@ -174,7 +176,8 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(431, 122);
+            label3.ForeColor = Color.Red;
+            label3.Location = new Point(488, 122);
             label3.Name = "label3";
             label3.Size = new Size(56, 20);
             label3.TabIndex = 13;
@@ -183,7 +186,8 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(431, 155);
+            label4.ForeColor = Color.Blue;
+            label4.Location = new Point(488, 155);
             label4.Name = "label4";
             label4.Size = new Size(61, 20);
             label4.TabIndex = 14;
@@ -198,6 +202,7 @@
             IMGDone.SizeMode = PictureBoxSizeMode.StretchImage;
             IMGDone.TabIndex = 15;
             IMGDone.TabStop = false;
+            IMGDone.Visible = false;
             // 
             // checkBox1
             // 
@@ -225,12 +230,22 @@
             checkBox2.UseVisualStyleBackColor = true;
             checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.CropPDF;
+            pictureBox1.Location = new Point(287, 53);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(190, 148);
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
+            // 
             // frmMain
             // 
             AllowDrop = true;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(708, 380);
+            ClientSize = new Size(708, 367);
+            Controls.Add(pictureBox1);
             Controls.Add(checkBox2);
             Controls.Add(checkBox1);
             Controls.Add(IMGDone);
@@ -257,6 +272,7 @@
             DragDrop += frmMain_DragDrop;
             DragEnter += frmMain_DragEnter;
             ((System.ComponentModel.ISupportInitialize)IMGDone).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -281,5 +297,6 @@
         private PictureBox IMGDone;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
+        private PictureBox pictureBox1;
     }
 }

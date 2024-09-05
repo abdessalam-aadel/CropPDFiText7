@@ -243,6 +243,7 @@ namespace CropPDFiText7
             }
         }
 
+        // checkBox1 for crop yellow and green paper
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -266,6 +267,7 @@ namespace CropPDFiText7
             }
         }
 
+        // checkBox1 for crop bordereau
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox2.Checked)
