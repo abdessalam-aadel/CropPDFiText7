@@ -267,7 +267,7 @@ namespace CropPDFiText7
             }
         }
 
-        // checkBox1 for crop bordereau
+        // checkBox2 for crop bordereau
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox2.Checked)
